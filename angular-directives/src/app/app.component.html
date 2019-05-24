@@ -12,3 +12,13 @@
     {{ friend.name }}
   </li>
 </ul>
+
+<ul>
+  <li (click)="setActiveTab('student')">Student</li>
+  <li (click)="setActiveTab('ta')">TA</li>
+</ul>
+
+<div [ngSwitch]="activeTab">
+  <div *ngSwitchCase="'student'"><app-student></app-student></div>
+  <div *ngSwitchCase="'ta'"><app-ta></app-ta></div>
+</div>

@@ -15,4 +15,9 @@ export class AppComponent {
     { name: "Ben" },
     { name: "Rose" }
   ];
+
+  activeTab = "ta";
+  setActiveTab(tabName: string) {
+    this.activeTab = tabName;
+  }
 }
